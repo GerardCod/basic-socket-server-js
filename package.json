@@ -1,0 +1,20 @@
+{
+  "name": "01-socket-server-basic",
+  "version": "1.0.0",
+  "description": "Development of a basic socket server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "socket-server-basic"
+  },
+  "keywords": [
+    "socket",
+    "node",
+    "javasscript"
+  ],
+  "author": "Gerardo Aguilar",
+  "license": "ISC"
+}
