@@ -4,7 +4,8 @@
   "description": "Development of a basic socket server",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
     "javasscript"
   ],
   "author": "Gerardo Aguilar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.0"
+  }
 }
