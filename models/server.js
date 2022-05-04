@@ -11,7 +11,7 @@ class Server {
         this.port = process.env.PORT;
 
         // Http Server
-        this.server = http.createServer(app);
+        this.server = http.createServer(this.app);
 
         // Configuraciones de sockets
         this.io = socketio(this.server);
