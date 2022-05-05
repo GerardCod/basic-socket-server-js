@@ -52,6 +52,10 @@
         `;
         };
 
+        socket.on('connect', () => {
+            console.log('Conectado');
+        });
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
