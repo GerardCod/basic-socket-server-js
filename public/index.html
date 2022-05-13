@@ -36,54 +36,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js" integrity="sha512-/xb5+PNOA079FJkngKI2jvID5lyiqdHXaUUcfmzE0X0BdpkgzIWHC59LOG90a2jDcOyRsd1luOr24UCCAG8NNw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const socket = io('https://basic-socket-server-js.herokuapp.com');
-        
-        const form = document.querySelector('#miFormulario');
-
-        const mensajes = document.querySelector('#misMensajes');
-
-        const txtMensaje = document.querySelector('#txtMensaje');
-
-        const createMessage = ({msg}) => {
-            return `
-            <li class="list-group-item">
-                ${msg}
-            </li>       
-        `;
-        };
+        const socket = io('http://localhost:8081');
 
         socket.on('connect', () => {
             console.log('Conectado');
         });
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const nuevoMensaje = txtMensaje.value;
-            
-            socket.emit('mensaje-usuario', {
-                msg: nuevoMensaje,
-                date: new Date()
-            });
-
-            txtMensaje.value = '';
-        });
-
-        /* socket.on('mensaje-bienvenida', (data) => {
-            console.log(data);
-        }); */
-
-/*         setTimeout(() => {
-            
-            socket.emit('mensaje-nombre', {
-                msg: 'Hola',
-                nombre: 'Gerardo'
-            });
-
-        }, 2000); */
         
-        socket.on('mensaje-servidor', (data) => {
-            mensajes.innerHTML += createMessage(data)
+        socket.on('current-bands', (data) => {
+            console.log(data);
         });
     </script>
 </body>

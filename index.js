@@ -6,6 +6,3 @@ dotenv.config();
 const server = new Server();
 
 server.execute();
-
-
-// Desplegar el directorio público

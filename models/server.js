@@ -30,7 +30,6 @@ class Server {
     execute() {
 
         this.middlewares();
-
         this.socketsSetup();
 
         this.server.listen(this.port, () => {
